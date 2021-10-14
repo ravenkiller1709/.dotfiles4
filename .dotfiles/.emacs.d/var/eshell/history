@@ -1,0 +1,57 @@
+lsblk
+sudo mount /dev/sda1 /mnt
+gpg --list-keys
+ls
+ls -all
+sudo dnf install cmake
+exit
+sudo dnf install libtool
+exit
+sudo dnf install picom slock
+exit
+ls
+cd /usr/share/backgrounds/
+ls
+sudo cp fedora-workstation/fedora-printed.jpg wall.jpg 
+rm wall.jpg 
+sudo rm wall.jpg 
+sudo cp fedora-workstation/fedora-printed.jpg wall.jpg 
+exit
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install gstreamer1-plugins-bad gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install gstreamer1-plugins gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf search gstreamer
+sudo dnf install gstreamer1
+sudo dnf install ffmpeg
+xsetroot -cursor_name left_ptr
+sudo dnf search xsetroot
+sudo dnf install xsetroot
+exit
+sudo dnf install gcolor2
+exit
+flatpak install spotify
+xprop
+sudo dnf install xprop
+xprop
+exit
+ls
+ls -all
+mv .dotfiles/ .dotfiles3
+ls -all
+rm .mbsyncrc 
+cd .config/
+ls
+cd 
+mkdir .dotfiles
+cd .dotfiles/
+git init
+echo "# .dotfiles" >> README.md
+git init
+git add README.md 
+git commit -m "first commit"
+git config --global user.email "kim@kimkruse.xyz"
+git config --global user.name "ravenkiller1709"
+git branch -M main
+git remote add origin git@github.com:ravenkiller1709/.dotfiles.git
+git push -u origin main
+git commit -a

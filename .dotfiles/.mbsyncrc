@@ -1,0 +1,47 @@
+IMAPAccount kimkruse
+Host mail.kimkruse.xyz
+Port 993
+User kim
+PassCmd "emacsclient -e \"(efs/lookup-password :host \\\"kimkruse.xyz\\\" :user \\\"kim\\\")\" | cut -d '\"' -f2"
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore kimkruse-remote
+Account kimkruse
+
+MaildirStore kimkruse-local
+Path ~/Mail/kimkruse/
+Inbox ~/Mail/kimkruse/Inbox
+Subfolders Verbatim
+
+Channel kimkruse
+Master :kimkruse-remote:
+Slave :kimkruse-local:
+Patterns *
+Expunge None
+Sync All
+Create Both
+SyncState *
+
+IMAPAccount gmail
+Host imap.gmail.com
+User mail4kruse@gmail.com
+Passcmd "emacsclient -e \"(efs/lookup-password :host \\\"gmail.com\\\" :user \\\"mail4kruse@gmail.com\\\")\" | cut -d '\"' -f2" 
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Subfolders Verbatim
+Path ~/Mail/Gmail/
+Inbox ~/Mail/Gmail/Inbox
+
+Channel gmail
+Master :gmail-remote:
+Slave :gmail-local:
+Patterns * 
+Create Both
+SyncState *
