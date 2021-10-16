@@ -26,7 +26,7 @@ We use the excellent [[https://github.com/ch11ng/exwm][EXWM]] module as the basi
     (exwm-workspace-switch-create 1)
 
     ;; Open eshell by default
-    ;;(eshell)
+    (eshell)
 
     ;; NOTE: The next two are disabled because we now use Polybar!
 
@@ -68,6 +68,7 @@ We use the excellent [[https://github.com/ch11ng/exwm][EXWM]] module as the basi
     (pcase exwm-class-name
       ("Firefox" (exwm-workspace-move-window 2))
       ("Spotify" (exwm-workspace-move-window 3))
+      ("com.microsoft.Teams" (exwm-floating-toggle-floating))
       ("mpv" (exwm-floating-toggle-floating)
              (exwm-layout-toggle-mode-line))))
 

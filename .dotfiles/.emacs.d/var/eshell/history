@@ -55,3 +55,13 @@ git branch -M main
 git remote add origin git@github.com:ravenkiller1709/.dotfiles.git
 git push -u origin main
 git commit -a
+flatpak install google-chrome
+cd Hentet
+ls
+sudo rpm -i google-chrome-stable_current_x86_64.rpm 
+sudo dnf install liberation-fonts
+sudo rpm -i google-chrome-stable_current_x86_64.rpm 
+sudo rm /var/lib/rpm/.rpm.lock
+sudo rpm -i google-chrome-stable_current_x86_64.rpm 
+sudo dnf install mpv
+exit
